@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import sys
+import os
+from engine.BikePredictEngine import BikePredictEngine
+
+def main(argv):
+
+	if len(argv) == 2:
+		cliArg = argv[1]
+		if ('help' in cliArg.lower()) or ('-h' in cliArg.lower()):
+			print "Usage:"
+			print "./startBikePredict [-h|--help]\n"
+			print "Description:"
+			print "Starts the BikePredict Engine."
+        	return 1
+	else :
+		bikePredict = BikePredictEngine()
+		bikePredict.start()
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
+	

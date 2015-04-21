@@ -2,8 +2,8 @@
 Lightweight forecasting tool for city bikes availability. 
 
 # Design 
-The forecasting method used is a simple composite ARIMA/ARMA forecasting
-method, based on a limited number of recent bike/station spaces measurements.
+The forecasting method used is a simple composite Holt-Winters forecasting
+method (exp. smoothing), based on a limited number of recent bike/station spaces measurements.
 This is to faciliate a sharded architecture, and reduce the overhead making
 multiple predictions in parallel. 
 
